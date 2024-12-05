@@ -11,3 +11,4 @@ x = 9
 y = x*x
 
 #ran test_square and got all ok!
+# could have also done x**2

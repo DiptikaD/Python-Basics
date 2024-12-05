@@ -18,3 +18,15 @@ amount = "three"
 #operator for exponential operations 
 2**10
 # output = 1024. this is 2^10
+
+##################################
+
+#Strings
+message = "moka is weird"
+print(message.upper())
+print(message.capitalize())
+print(len(message))
+print(message.islower())
+print(message + "!")
+print(message.replace("weird", "stinky"))
+#keep quotes consistent "" '' and use escape characters if needed \n \' \t
