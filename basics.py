@@ -53,3 +53,14 @@ print("oh its " + name + "!")
 #could have also written as
 print(f"oh its {name}!")
 #this is a fstring, py looks for the code within {} and will convert the variable or code to fit into the fstring. it saves having to put +s and str(5) to convert ints into str.
+
+#string join method - for converting a list of strings into one string with a joining common
+colors = ["purple", "blue", "green", "orange"]
+joined_colors = ", ".join(colors)
+print(joined_colors)
+#how does it know i do not want , at the start? dunno, but its a quick solution to having to iterate
+
+#also works for ints too!
+digits = range(10)
+digit_string = "".join(str(n) for n in digits)
+print(digit_string)
