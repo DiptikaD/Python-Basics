@@ -65,4 +65,5 @@ digits = range(10)
 digit_string = "".join(str(n) for n in digits)
 print(digit_string)
 
-# REPL can be used on command prompt by typing "python3" for a responsive IDE. it does not save your work, but it acts as a playground to try snippets of code.
+# REPL can be used on command prompt by typing "python3" for a responsive IDE. it does not save your work, but it acts as a playground to try snippets of code. 
+# you can also have a pop-out window which might eliminate code visualisation errors using: python3 -m idlelib
