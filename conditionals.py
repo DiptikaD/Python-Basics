@@ -33,3 +33,24 @@ elif wavelength < 780:
     print("Red")
 else:
     print("Not visible")
+
+# below we see a python's ternary. "this if thing, else that". 
+# NOTE: The ternary also automatically flags 0 = false, 1 = true
+# therfore its really: this if true, else that 
+coin_flip = randint(0, 1)
+
+print("Heads" if coin_flip else "Tails")
+
+#for the sake of random, the choice method can spin between the provided options:
+import random
+
+print(random.choice(("Coconut", "Lime", "Sour cream")))
+#could potentially put a tuple in place
+
+#substrings can be compared to check if something appears in a another string
+banana = "banana"
+bananaSentence = "I don't want to eat banana"
+print(banana in bananaSentence)
+#case insentitive would be:
+wantWord = "Want"
+print(wantWord.casefold() in bananaSentence.casefold())
