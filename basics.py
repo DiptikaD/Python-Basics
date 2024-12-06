@@ -64,3 +64,5 @@ print(joined_colors)
 digits = range(10)
 digit_string = "".join(str(n) for n in digits)
 print(digit_string)
+
+# REPL can be used on command prompt by typing "python3" for a responsive IDE. it does not save your work, but it acts as a playground to try snippets of code.
