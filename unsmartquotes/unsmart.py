@@ -26,3 +26,4 @@ print(text
       )
 
 #you can line up functions on the same variable to get a big chunk done
+# pass all tests
