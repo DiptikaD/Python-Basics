@@ -30,3 +30,7 @@ print(question + random.choice(moka_crimes))
     ## but it can still iterate
 for food in moka_cannot_eat:
     print("moka got in trouble for eating " + food)
+
+    ## can also list to show all options in an iterable
+print(list(moka_cannot_eat))
+print(list(coordinates))
