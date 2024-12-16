@@ -34,3 +34,16 @@ for food in moka_cannot_eat:
     ## can also list to show all options in an iterable
 print(list(moka_cannot_eat))
 print(list(coordinates))
+
+    ## Lists make it easy to append/add new entries, can add duplicates. remove with pop()
+moka_crimes.append("steals socks")
+print(moka_crimes)
+
+    ## pop to remove, can store it at the same time. lists are ordered
+removed_crime = moka_crimes.pop()
+print(moka_crimes)
+
+    ## lists have negative indexing, -1 = last value in list, -2 = second last
+print(moka_crimes[-2])
+
+    ## Lists are the most common data structure of python
