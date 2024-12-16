@@ -4,4 +4,8 @@ filename = sys.argv[1]
 
 with open(filename) as file:
     lines = file.read().splitlines()
-# TODO Write your code here
+    ## all passed tests
+
+for line in lines:
+    if "TODO" in line:
+        print(line)
