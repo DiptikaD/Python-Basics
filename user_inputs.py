@@ -34,3 +34,28 @@ arguments = sys.argv[1:]
 
 name = arguments[0] if arguments else "world"
 print(f"Hello {name}!")
+
+    ## sys.argv vs argparser
+    ## argparser is a user-friendly version of sys.argv, it has alot more code, but it provides quality of life commands for users
+    ## --verbose; to spell out what is going on
+    ## --help; to provide information of the input required
+    ## helpful error messages
+[program, x, y] = sys.argv
+print(float(x) + float(y))
+
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('x', type=float)
+parser.add_argument('y', type=float)
+args = parser.parse_args()
+print(args.x+args.y)
+
+
+    ## number formatting
+# num = 4
+# print("{num:.2f}", f"{num:.2f}", "2 digits after decimal", sep="\t")
+# print("{num:02}", f"{num:02}", "0-pad to 2 digits", sep="\t")
+# print("{num: 3}", f"{num: 3}", "space-pad to 3 digits", sep="\t")
+# print("{num:.0%}", f"{num:.0%}", "format as percent with 0 digits after decimal", sep="\t")
+# print("{num**6:,}", f"{num**6:,}", "add commas as thousands separators", sep="\t")
