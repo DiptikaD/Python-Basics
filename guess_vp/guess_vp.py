@@ -52,6 +52,18 @@ vp_terms = [
     ("Kamala Harris", 2021, 2024),
 ]
 
+name, term_start, term_end = random.choice(vp_terms)
+
+print(f"{name} is currently Vice President.")
+year = int(input("What year might it be?"))
+start = int(term_start)
+end = int(term_end)
+
+if year >= start and year <= end:
+    print("It could be!")
+else: print("Sorry time traveler. That\'s not right.")
+print(f"{name} was VP from {start} to {end}.")
+
 
 # TODO print "[NAME] is currently Vice President."
 # TODO prompt the user, "What year might it be?"
