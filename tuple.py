@@ -55,3 +55,22 @@ print(reverse_greet)
     ## NOTE: slicing can be done on anything that can be indexed, this includes tuples, lists, dictionaries and strings
 print(greet[:200]) ##<<----- there is no out of bounds err!
 print(greet[-3:])
+
+    ## integer division
+    ## where normal division would be a true division with a floating number
+devils = 4/6    ##  = 0.66666666
+    ## integer division is a floor division, rounding the result DOWN  to the nearest integer
+devilsDown = 4//6   ## = 0
+    ## This is a great substition for 
+n = 3
+int(n/2)    ## where the div is being converted to int, could instead used //
+
+    ## divmod
+    ## where following a // you might want the value of the remainder %
+    ## can do this action in one swoop with divmod
+duration = 500
+minutes = duration//60
+seconds = duration%60
+    ## could instead do:
+minutes, seconds = divmod(duration, 60)
+    ##  "Return the tuple (x//y, x%y)"
