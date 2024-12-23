@@ -74,3 +74,8 @@ seconds = duration%60
     ## could instead do:
 minutes, seconds = divmod(duration, 60)
     ##  "Return the tuple (x//y, x%y)"
+
+    ## sequences
+    ## is just indexing, you can splice and check length
+    ## not all data structures can be sequenced
+    ## dictionary and sets cannot be indexed [0] = typeERR or keyERR
