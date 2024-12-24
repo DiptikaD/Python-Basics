@@ -11,3 +11,11 @@ print(scores)
 print("hup" in scores)
     # but doesnt work the same way for values
 print("5000" in scores)
+
+#   looping over dictionaries
+    # generally dictionaries are meant for lookups and referencing. if looping is more important than lookup, then could instead benefit from using TUPLES
+for keys in scores:
+    print(keys)
+    # generally keys are the most visible aspect of a dictionary, you can reference it, check for it, the value is protected by the key.
+for name, points in scores.items():
+    print(name, points)
