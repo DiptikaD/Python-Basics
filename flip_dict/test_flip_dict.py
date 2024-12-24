@@ -58,7 +58,7 @@ class FlipDictTests(unittest.TestCase):
         }, "The given dictionary should not change")
 
     # To test bonus 1, comment out the next line
-    @unittest.expectedFailure
+   # @unittest.expectedFailure
     def test_with_error_on_duplicates(self):
         no_dups = {
             'Python': "2015-09-15",
