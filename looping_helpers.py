@@ -40,3 +40,20 @@ squares = (n*n for n in numbers)
 print(sorted(squares, reverse=True))    #there are flags, this sorts in rev
 print(sorted(colours, key=len)) # can sort strings, default is by alphabetical order, but can use the key=len to instead sort by length (length of string)
 print(sorted(colour))   #"purple" in alphabetical order
+
+#   ENUMERATE
+n=1
+for colour in colours:  # this is the java way to loop via indexes
+    print(n, colour)
+    n+=1
+
+    # instead we can enumerate to return an index and value
+for item in enumerate(colours, start=1):
+    n, colour = item    # unpacking tuple
+    print(n,colour)
+
+    # could just directly print
+for n, colour in enumerate(colours, start=1):   # separate variables
+    print(n,colour)
+
+    
