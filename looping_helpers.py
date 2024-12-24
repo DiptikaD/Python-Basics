@@ -31,3 +31,12 @@ print(filejoin)
 numbers = [3,4,4,3,5,5,66,7,7]
 print(" $".join(str(n) for n in numbers))
     ## can do an inline for loop to convert to str and join.
+
+#   SORT/SORTED
+numbers.sort # will mutate the existing data structure
+
+print(sorted(numbers))  # sorted is more generic and will not mutate.
+squares = (n*n for n in numbers)
+print(sorted(squares, reverse=True))    #there are flags, this sorts in rev
+print(sorted(colours, key=len)) # can sort strings, default is by alphabetical order, but can use the key=len to instead sort by length (length of string)
+print(sorted(colour))   #"purple" in alphabetical order
