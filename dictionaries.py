@@ -19,3 +19,13 @@ for keys in scores:
     # generally keys are the most visible aspect of a dictionary, you can reference it, check for it, the value is protected by the key.
 for name, points in scores.items():
     print(name, points)
+
+#   removing a dictionary key
+    # two methods, del statement, or pop function
+del scores["kwa"]   # quietly deletes
+slo = scores.pop("slo") # can save the value during deletion
+print(scores,slo)
+
+    # could attempt to delete a key that doesnt exist by dodging a keyerr
+scores.pop("sti", "key not found")  # without the second statement, a keyerr would be given
+scores.pop("hof", False)
