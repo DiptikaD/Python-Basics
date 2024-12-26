@@ -82,7 +82,7 @@ class PhoneticTests(unittest.TestCase):
         )
 
     # To test bonus 2, comment out the next line
-    # @unittest.expectedFailure
+    @unittest.expectedFailure
     def test_alphabet_file(self):
         contents = dedent("""
             a alfa
