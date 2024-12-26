@@ -62,7 +62,7 @@ class PhoneticTests(unittest.TestCase):
         self.assertEqual(output.rstrip("\n"), "Text to spell out: ")
 
     # To test bonus 1, comment out the next line
-    @unittest.expectedFailure
+    # @unittest.expectedFailure
     def test_multiple_words(self):
         # Multiple words as separate arguments
         output = run_program('phonetic.py Monty Python')
@@ -82,7 +82,7 @@ class PhoneticTests(unittest.TestCase):
         )
 
     # To test bonus 2, comment out the next line
-    @unittest.expectedFailure
+    # @unittest.expectedFailure
     def test_alphabet_file(self):
         contents = dedent("""
             a alfa
