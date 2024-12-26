@@ -39,3 +39,54 @@ def calculate_gpa(list_of_scores):
     return sum / len(list_of_scores)
 
     ## base test passes including all four bonus test cases!!
+
+## other solutions!
+
+## ROUND BONUS
+builtin_round = round       # gave round() an alias before function existed
+
+GRADES = [      # reversed the order of his dictionary to mine
+    (97, 'A+'),
+    (93, 'A'),
+    (90, 'A-'),
+    (87, 'B+'),
+    (83, 'B'),
+    (80, 'B-'),
+    (77, 'C+'),
+    (73, 'C'),
+    (70, 'C-'),
+    (67, 'D+'),
+    (63, 'D'),
+    (60, 'D-'),
+]
+
+def percent_to_grade(percent, *, suffix=False, round=False):
+    if round:
+        percent = builtin_round(percent)    # the built in round works now, but it ISNT the correct method for only wanting to round up by half. instead can insert my percent += percent+0.5. He made it as another function he called upon.
+    for min_percent, letter in GRADES:
+        if min_percent <= percent:
+            return letter if suffix else letter.rstrip('-+')    # if suffix is false, then it will always fall under the correct lettering and the -/+ will be stripped, else, it will specify the respective suffixed grade!
+    return 'F' # else all minimums, then receive F
+
+### GPA BONUS
+
+GPAS = {
+    'A': 4,
+    'B': 3,
+    'C': 2,
+    'D': 1,
+    'F': 0,
+}
+
+
+SIGNS = {
+    '-': -0.33,
+    '+': +0.33,
+}
+
+
+def calculate_gpa(grades):
+    points = sum(GPAS[g[0]] for g in grades)    # checks each letter and sums up
+    points += sum(SIGNS.get(g[-1], 0) for g in grades)  # checks each sign and sums up
+    return points / len(grades) 
+# this solution is very crafty, but harder for me to follow initially as there is alot going on.
