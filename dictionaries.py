@@ -45,3 +45,33 @@ from collections.abc import (
     Hashable,Iterable, KeysView, Mapping,
         MutableMapping, Set)
     # functions and data structures already have their own brackets which you can format with
+
+
+#   default dictionary values
+        ## to look up a key that is not in the dictionary and set it a default value.
+        # get method looks up a value without raising an exception for missing keys
+print(scores.get("zop", 0), "zop score") # it checked and did not add the key, so it returned the default
+print(scores.get("hup", 0), "hup score")
+    # if no default value is provided, then it defaults to None. 
+#   what about setting a default value
+        # can use setdefault
+from dataclasses import dataclass
+
+@dataclass
+class Item:     # looks like this is a class defined as Item with two attributes
+    name: str
+    color: str
+
+items = [
+    Item("duck", "purple"),
+    Item("water bottle", "purple"),
+    Item("uni-duck", "pink"),
+    Item("sticky notes", "yellow"),
+]
+items_by_color = {}
+for item in items:
+    items_by_color.setdefault(item.color, [])   # the class allows the key/values to be separated by .color and .name
+    items_by_color[item.color].append(item.name)
+#   items_by_color.setdefault(item.color, []).append(item.name) # instead of doing the two upper lines, can combine
+
+print(items_by_color)
