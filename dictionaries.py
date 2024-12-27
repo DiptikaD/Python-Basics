@@ -75,3 +75,42 @@ for item in items:
 #   items_by_color.setdefault(item.color, []).append(item.name) # instead of doing the two upper lines, can combine
 
 print(items_by_color)
+
+##  initialising defaults
+    # what if we knew the keys we want, but will fill in the values later
+    # could use the dict class's fromkeys
+months = dict.fromkeys(range(1,13),0)   # here we have the 12 months as keys with empty values
+print(months)   
+
+colours = dict.fromkeys(["foam", "dust", "slobber", "lint", "sneeze"])
+print(colours)  # if no second argument is provided in the above, default would be NONE.
+
+##  immutable defaults
+    # what if we wanted to automate appending entries from a list as values?
+    # cannot use fromkeys, instead use:
+##  dictionary comprehension
+task_names = ['stage1', 'stage2', 'stage3'] # the keys we want to consolidate
+task_runs = [
+    ['stage1', 38], # the raw data we want to clean up
+    ['stage1', 47],
+    ['stage1', 52],
+    ['stage2', 27],
+    ['stage2', 12],
+    ['stage2', 23],
+    ['stage3', 62],
+    ['stage3', 56],
+    ['stage3', 63],
+]
+runtimes = {name: [] for name in task_names}
+for task, run in task_runs:
+    runtimes[task].append(run)
+    #   this works as the names in th two lists match, so we can easily plant the keys with the first list task_names, then fill out the details with task_runs by tying the keys together by common name.
+print(runtimes)
+
+##  what if you want to count the occurance from a list and turn it into a dictionary
+from collections import Counter
+chosen = ["russia", "slovania", "belarus", "poland", "belarus", "belarus", "poland", "poland","russia","russia", "poland"]
+quantities = Counter(chosen)
+print(quantities)
+
+### please see the IMAGE.PNG for a quick reference on which to use when it comes to dictionaries
