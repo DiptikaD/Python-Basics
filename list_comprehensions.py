@@ -24,9 +24,10 @@ for name in screencasts:
         print(short_names)
 
 short_names = [name.title() for name in screencasts if len(name) <= 30]
-#   (1)                     (2)                     (3)
+#   (1)          (2)        (3)                     (4)
 
     ## the anatomy of a list comprehension is: 
         # (1): name of new list to append to
-        # (2): looping logic
-        # (3): conditions if any
+        # (2): item to add to list
+        # (3): looping logic
+        # (4): conditions if any

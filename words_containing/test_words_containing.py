@@ -23,7 +23,7 @@ class WordsContainingTests(unittest.TestCase):
         )
 
     # To test bonus 1, comment out the next line
-    @unittest.expectedFailure
+    # @unittest.expectedFailure
     def test_case_insensitive(self):
         zen_line_2 = ["Explicit", "is", "better", "than", "implicit"]
         self.assertEqual(
