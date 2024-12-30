@@ -21,3 +21,13 @@ def process_vowels(input_name):
             return True
         
 # all tests pass
+
+## other solutions
+def get_vowel_names(names):
+    return [
+        name
+        for name in names
+        if name[0].upper() in "AEIOU"   # they iterated through a string instead of list, this bypasses the need for the helper function
+    ]
+
+# a little embarrassed i did not come up with that solution, but thats what next time is for!
