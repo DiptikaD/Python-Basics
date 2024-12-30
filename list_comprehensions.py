@@ -60,3 +60,37 @@ shortened = [   # list comprehension from above loop!
     ellipsify(name)
     for name in screencasts
 ]
+
+
+## nested list comprehensions
+## for when making a list of lists
+def strings_to_numbers(matrix): # taking this and turning it into a nested list comprehension
+    new_matrix = []     # second comprehension
+    for row in matrix:
+        new_row = []    # first comprehension
+        for n in row:
+            new_row.append(int(n))
+        new_matrix.append(new_row)
+    return new_matrix
+
+    # here is the function altered for the first comprehension
+def strings_to_numbers(matrix):
+    new_matrix = []
+    for row in matrix:
+        new_matrix.append([int(n) for n in row])
+    return new_matrix
+
+    # here is the second
+def strings_to_numbers(matrix):
+    new_matrix = [
+        [int(n) for n in row]
+        for row in matrix
+    ]
+    return new_matrix   # return is useless as we could one line everything
+
+    ## final form
+def strings_to_numbers(matrix):
+    return [
+        [int(n) for n in row]
+        for row in matrix
+    ]
