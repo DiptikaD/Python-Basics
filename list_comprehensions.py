@@ -31,3 +31,32 @@ short_names = [name.title() for name in screencasts if len(name) <= 30]
         # (2): item to add to list
         # (3): looping logic
         # (4): conditions if any
+
+    ## the general rule to convert for loops into list comprehensions:
+        # if you have an empty list to append to
+        # iterating through
+        # one end to an unlimited if statement
+            # if there is an else, then then it can be condensed down by using a helper function!!
+            # for example:
+shortened = []
+for name in screencasts:
+    if len(name) > 30: # this complex if/else could be eliminated with a helper function
+
+        shortened.append(name[:30-3] + "...")
+    else:
+        shortened.append(name)  
+
+def ellipsify(name):
+    if len(name) > 30:
+        return name[:30-3] + "..."
+    else:
+        return name
+ 
+shortened = [] 
+for name in screencasts:    # altered for loop from above function
+    shortened.append(ellipsify(name))
+
+shortened = [   # list comprehension from above loop!
+    ellipsify(name)
+    for name in screencasts
+]
