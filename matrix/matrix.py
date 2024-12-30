@@ -27,3 +27,15 @@ def matrix_from_string(string):     # "1 2\n10 20"
     return final_array
 
 ## all test cases pass, but not including the bonus!
+    ## other solutions
+    return [        # solution very similar to my husband's attempt
+        [float(n) for n in row_string.split()]
+        for row_string in matrix_string.splitlines()
+    ]
+
+    ## solution for bonus
+    return [
+        [float(n) for n in row_string.split()]
+        for row_string in matrix_string.splitlines()
+        if row_string.strip()   # added a condition if the resulting whitespace stripped is >0
+    ]
