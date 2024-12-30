@@ -31,7 +31,7 @@ class MatrixFromStringTests(unittest.TestCase):
         )
 
     # To test bonus 1, comment out the next line
-    @unittest.expectedFailure
+    # @unittest.expectedFailure
     def test_lots_of_space(self):
         self.assertEqual(
             matrix_from_string(dedent("""
