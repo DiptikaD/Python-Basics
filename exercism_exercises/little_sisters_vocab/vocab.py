@@ -12,3 +12,10 @@ def remove_suffix_ness(word):
     if "iness" in word:
         return f"{word[:-5]}y"
     return f"{word[:-4]}" 
+
+
+
+def adjective_to_verb(sentence, index):
+    sentence2=sentence.replace(".","")
+    words = sentence2.split()
+    return f"{words[index]}en"
