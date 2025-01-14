@@ -18,3 +18,9 @@ def card_average(hand):
     for card in hand:
         product += card
     return product/len(hand)
+
+def approx_average_is_average(hand):
+    first_last_avg = card_average([hand[0], hand[-1]])
+    middle_avg = hand[len(hand)//2]
+    avg=card_average(hand)
+    return avg in (first_last_avg, middle_avg)
