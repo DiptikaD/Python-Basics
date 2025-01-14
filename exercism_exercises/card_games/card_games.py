@@ -24,3 +24,13 @@ def approx_average_is_average(hand):
     middle_avg = hand[len(hand)//2]
     avg=card_average(hand)
     return avg in (first_last_avg, middle_avg)
+
+def average_even_is_average_odd(hand):
+    even = hand[::2]
+    odd = hand[1::2]
+    if not even and not odd:
+        return True
+    if not even or not odd:
+        return False
+    
+    return card_average(even) == card_average(odd)
