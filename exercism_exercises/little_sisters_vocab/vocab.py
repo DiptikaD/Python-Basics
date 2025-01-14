@@ -19,3 +19,5 @@ def adjective_to_verb(sentence, index):
     sentence2=sentence.replace(".","")
     words = sentence2.split()
     return f"{words[index]}en"
+
+## all tests pass
