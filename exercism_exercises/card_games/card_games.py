@@ -34,3 +34,8 @@ def average_even_is_average_odd(hand):
         return False
     
     return card_average(even) == card_average(odd)
+
+def maybe_double_last(hand):
+    if hand[-1] == 11:
+        hand[-1] = 11*2
+    return hand
