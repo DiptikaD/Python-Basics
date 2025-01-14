@@ -7,3 +7,8 @@ def add_prefix_un(word):
 def make_word_groups(vocab_words):
     return " :: ".join([vocab_words[0]] + [vocab_words[0] + word for word in vocab_words[1:]])
 
+
+def remove_suffix_ness(word):
+    if "iness" in word:
+        return f"{word[:-5]}y"
+    return f"{word[:-4]}" 
