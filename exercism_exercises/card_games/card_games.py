@@ -39,3 +39,5 @@ def maybe_double_last(hand):
     if hand[-1] == 11:
         hand[-1] = 11*2
     return hand
+
+## all tests passed!
