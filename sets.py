@@ -19,8 +19,23 @@ print(littleSet)
     # - slice!
     # - concatenate with + 
 
-bigSet = {"large", "huge", "colossal"}
+bigSet = {"large", "huge", "small", "colossal"}
     ## can check if there is not any overlap in elements
-print(bigSet.isdisjoint(littleSet))
+print(bigSet.isdisjoint(littleSet), "is disjointed")
     ## false means there is shared elements, true means there isnt
 
+## subsets and supersets
+    # checks if all elements are present in another set
+print(littleSet <= bigSet, "false, subset operator")
+    # false
+
+smallSet = {"small", "microscopic"}
+print(smallSet <= littleSet, "subset operator")
+    # true, is false the other way around!
+
+print(smallSet.issubset(littleSet), "is subset")
+    # true
+
+## opposite can be tested with superset
+print(littleSet.issuperset(smallSet), "superset")
+    # true
