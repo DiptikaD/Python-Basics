@@ -29,5 +29,5 @@ jobs:
         uses: grantmcconnaughey/lintly-flake8-github-action@v1.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          failIf: "any" 
-          args: "." 
+          failIf: "any"
+          args: "."
