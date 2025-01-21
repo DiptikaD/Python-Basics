@@ -1,33 +1,12 @@
-name: Lintly Flake8 Check
-
-on:
-  pull_request:
-    branches:
-      - main
+on: [pull_request]
 
 jobs:
   lint:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.9' 
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install flake8
-          pip install markupsafe==2.1.0  # Install a compatible version of markupsafe
-          pip install Jinja2==3.0.0  # Install a compatible version of Jinja2
-
-      - name: Lintly-Flake8
-        uses: grantmcconnaughey/lintly-flake8-github-action@v1.0
+      - uses: actions/checkout@v1
+      - uses: grantmcconnaughey/lintly-flake8-github-action@v1.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          failIf: "any"
-          args: "."
+          failIf: any
+          args: "--ignore=E121,E123 ."
