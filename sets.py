@@ -56,3 +56,5 @@ print(bigSet.union(littleSet), "set union func")
 print(littleSet - smallSet, "diff operator")
 print(bigSet.difference(smallSet), "diff func")
 
+def test():
+    pass
