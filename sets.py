@@ -39,3 +39,10 @@ print(smallSet.issubset(littleSet), "is subset")
 ## opposite can be tested with superset
 print(littleSet.issuperset(smallSet), "superset")
     # true
+
+## set intersections
+    ## where .intersection() can return a new set with elements common to the original and all others, where everything intersects
+
+print(littleSet & smallSet & bigSet, "intersect operator")
+print(smallSet.intersection(bigSet), "intersect func")
+
