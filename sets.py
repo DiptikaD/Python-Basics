@@ -46,3 +46,7 @@ print(littleSet.issuperset(smallSet), "superset")
 print(littleSet & smallSet & bigSet, "intersect operator")
 print(smallSet.intersection(bigSet), "intersect func")
 
+### set unions
+    ## returns a new set with elements from all sets mentioned
+print(littleSet | bigSet | smallSet, "set union operator")
+print(bigSet.union(littleSet), "set union func")
