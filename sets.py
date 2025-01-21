@@ -50,3 +50,9 @@ print(smallSet.intersection(bigSet), "intersect func")
     ## returns a new set with elements from all sets mentioned
 print(littleSet | bigSet | smallSet, "set union operator")
 print(bigSet.union(littleSet), "set union func")
+
+### set differences
+    ## returns a new set with elements in the origin that are not in the other sets specified
+print(littleSet - smallSet, "diff operator")
+print(bigSet.difference(smallSet), "diff func")
+
