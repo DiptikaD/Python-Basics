@@ -11,17 +11,14 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.9'
 
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          pip install flake8  # Install flake8 if it's not part of your dependencies
+      - name: Install flake8
+        run: pip install flake8 
 
-      - name: Run Flake8
-        run: flake8 .
-
+      - name: Run flake8
+        run: flake8 --max-line-length=120 --ignore=E121,E123 .
