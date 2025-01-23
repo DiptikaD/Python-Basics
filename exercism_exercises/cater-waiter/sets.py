@@ -32,3 +32,6 @@ def compile_ingredients(dishes):
     # return set(bigset)
 
     return set([ingredient for dish in dishes for ingredient in dish])
+
+def separate_appetizers(dishes, appetizers):
+    return list(set(dishes).difference(appetizers))
