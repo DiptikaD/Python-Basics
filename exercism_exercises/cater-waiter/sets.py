@@ -6,4 +6,5 @@ from sets_categories_data import (VEGAN,
                                   ALCOHOLS,
                                   SPECIAL_INGREDIENTS)
 
-    ## initial commit
+def clean_ingredients(dish_name, dish_ingredients):
+    return dish_name, set(dish_ingredients)
