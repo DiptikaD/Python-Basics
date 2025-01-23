@@ -55,6 +55,3 @@ print(bigSet.union(littleSet), "set union func")
     ## returns a new set with elements in the origin that are not in the other sets specified
 print(littleSet - smallSet, "diff operator")
 print(bigSet.difference(smallSet), "diff func")
-
-def test():
-    pass
