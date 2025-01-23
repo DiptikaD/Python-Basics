@@ -35,3 +35,7 @@ def compile_ingredients(dishes):
 
 def separate_appetizers(dishes, appetizers):
     return list(set(dishes).difference(appetizers))
+
+def singleton_ingredients(dishes, intersection):
+    all = compile_ingredients(dishes)
+    return all - intersection
