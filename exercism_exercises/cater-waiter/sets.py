@@ -20,3 +20,7 @@ def categorize_dish(dish_name, dish_ingredients):
     for category_name, category_ingredients in categories:
         if dish_ingredients.issubset(category_ingredients) == True:
             return f"{dish_name}: {category_name}"
+        
+def tag_special_ingredients(dish):
+    restrictions = set(dish[1]).intersection(SPECIAL_INGREDIENTS)
+    return dish[0], restrictions
