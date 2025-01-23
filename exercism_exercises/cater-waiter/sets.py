@@ -24,3 +24,11 @@ def categorize_dish(dish_name, dish_ingredients):
 def tag_special_ingredients(dish):
     restrictions = set(dish[1]).intersection(SPECIAL_INGREDIENTS)
     return dish[0], restrictions
+
+def compile_ingredients(dishes):
+    # bigset = []
+    # for each in dishes:
+    #     bigset.extend(list(each))
+    # return set(bigset)
+
+    return set([ingredient for dish in dishes for ingredient in dish])
