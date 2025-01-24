@@ -19,3 +19,9 @@ def extend_route_information(route, more_route_information):
     combined = {**route, **more_route_information}
     return combined
     
+def fix_wagon_depot(wagons_rows):
+    transposed = list(zip(*wagons_rows))
+    ## zip allows for looping over 2 or more iterables at the same time, 
+    # is an alternative to looping with indexes
+
+    return [list(row) for row in transposed]
