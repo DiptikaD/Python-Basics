@@ -33,7 +33,7 @@ print(colour, point, "deep unpacking")
 items = [4,2,5,6,2,4]
 for i, (first, last) in enumerate(zip(items, reversed(items))):
     if first != last:
-        raise ValueError(f"item {i} does not match: {first} != {last}")
+        print(f"item {i} does not match: {first} != {last}")
     
 # another example
 def most_common(items):
@@ -57,3 +57,9 @@ print(combined_fruits, "combined tuple with list into tuple")
 print(combined_fruits, "combined both into list")
     # note the comma, which is necessary or else the *combined_fruits would error
 
+## packing a dictionary!
+# this is done with ** to pack all key/values.
+fruits_inventory = {"cherry": 8, "raspberry": 10, "tangerine": 4, "persimmon": 7}
+more_fruits_inventory= {"kiwi":6, "corn":7}
+combined_inventory = {**fruits_inventory, **more_fruits_inventory}
+print(combined_inventory, "combined dictionaries with **")
