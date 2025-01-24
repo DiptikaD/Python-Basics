@@ -13,3 +13,16 @@ print(three, "_ assignments")
 beginning, last = numbers[:-1], numbers[-1]
 print(beginning, "beginning", last, "last")
 
+## can also filter using asterisk
+first, *rest = numbers
+print(first, "first", rest, "rest")
+first, *middle, end = numbers
+print(middle, "middle with *")
+    # using the * it allows for if there are multiple arguments that
+    # could vary, preventing error
+
+## there is also deep unpacking, where you can dig into data structures
+colour, point = ("green", (1,2,3))
+print(colour, point, "deep unpacking")
+    # although it is assuming you know how many values is within those 
+    # data structures
