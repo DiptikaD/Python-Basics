@@ -14,3 +14,8 @@ def add_missing_stops(route, **kwargs):
     route["stops"] = stops
     
     return route
+
+def extend_route_information(route, more_route_information):
+    combined = {**route, **more_route_information}
+    return combined
+    
