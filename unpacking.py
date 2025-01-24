@@ -63,3 +63,24 @@ fruits_inventory = {"cherry": 8, "raspberry": 10, "tangerine": 4, "persimmon": 7
 more_fruits_inventory= {"kiwi":6, "corn":7}
 combined_inventory = {**fruits_inventory, **more_fruits_inventory}
 print(combined_inventory, "combined dictionaries with **")
+
+## packing arguments
+# *args is used to pack an arbitrary number of arguments as a tuple
+# **kwargs is as above but as a dictionary
+def args_as_tuple(*args):
+    print(args)
+print(args_as_tuple(1,2,3,"why", "not"))
+
+def kwargs_as_dictionary(**kwargs):
+    print(kwargs)
+print(kwargs_as_dictionary(a=1,b=2,c=6,n=9))
+    # they can also be used in combination, but thats too fancy
+
+    ### NOTE: args have to be structure like the following
+    # def my_function(<positional_args>, *args, <key-word_args>, **kwargs)
+    # not following this order will result in error
+
+## packing with zip
+values = (["x", "y", "z"], [1,2,3], [True, False, True])
+a, *rest = zip(*values)
+print(rest)
