@@ -45,3 +45,15 @@ def most_common(items):
 # and that first index of that first output being:
     # value
     # times_seen
+
+## can also pack multiple structures together in similar manner
+fruits = ("apple", "banana", "cherry")
+more_fruits = ["lemon", "kiwi", "melon", "blueberry"]
+combined_fruits = *fruits, *more_fruits
+print(combined_fruits, "combined tuple with list into tuple")
+
+# could also instead combine into list
+*combined_fruits, = *fruits, *more_fruits
+print(combined_fruits, "combined both into list")
+    # note the comma, which is necessary or else the *combined_fruits would error
+
