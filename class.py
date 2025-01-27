@@ -61,3 +61,11 @@ letters['l'] = -2   # reassigning occurance
 print(letters)  # it has no logic for negative commonality, so we will make a new method for it in our new class
     # created the __setitem__ method which has fixed this.
 
+# -------------------------------------- #
+
+# singletons!
+# where a class only allows the creation of one instance of itself
+    # for example, None is a singleton
+new_none = type(None)()
+print(new_none is None, "new_none is None")
+    # although we clearly created a new instance of none, it is still the exact same
