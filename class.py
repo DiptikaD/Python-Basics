@@ -69,3 +69,18 @@ print(letters)  # it has no logic for negative commonality, so we will make a ne
 new_none = type(None)()
 print(new_none is None, "new_none is None")
     # although we clearly created a new instance of none, it is still the exact same
+
+# to create a singleton, just need to add the __new__ method to a class:
+class EventTracker:
+    _self = None
+
+    def __new__(cls):
+        if cls._self is None:
+            cls._self = super().__new__(cls)
+        return cls._self
+
+    def __init__(self):
+        self.api_url= "http://example.com"
+    
+    def track(self):
+        print(f"TODO track event at {self.api_url}")
