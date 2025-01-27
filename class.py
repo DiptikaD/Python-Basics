@@ -40,8 +40,24 @@ class FancyCounter(Counter):    ## Inheriting by calling the class immediately
         # can inherit from multiple classes! but not common
         # no __init__ needed as it is present in Counter which is called
 
+    def __setitem__(self, key, value):  # to set a limit to common occurance being no less than 0
+        value = max(0,value)
+        return super().__setitem__(key, value)
+        ## this works by referring the parent/super class and overwriting their __setitem__ as this
+
     def commonest(self):
         (value1,count1), (value2, count2) = self.most_common(2)     # .most_common from parent class
         if count1 == count2:
             raise ValueError("No unique most common Value")
         return value1
+    
+## calling our new class and method:
+letters = FancyCounter("Hello there!")
+print(letters)  # prints all nice due to the __repr__ method in Counter for string representation
+
+print(letters.commonest(), "<--- commonest output")
+
+letters['l'] = -2   # reassigning occurance
+print(letters)  # it has no logic for negative commonality, so we will make a new method for it in our new class
+    # created the __setitem__ method which has fixed this.
+
