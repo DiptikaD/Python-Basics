@@ -94,3 +94,21 @@ print(tracker is tracker2, "tracker is tracker2")
 
 
 ## Creating a Singleton with global object instead
+    # instead of calling upon the same instance, we can alter the existing instance if needed
+    # this is done by creating a global class, generally better encouraged
+
+class _EventTracker:      # _ denotes that it is private by convention
+                        # this lets people know to not use the class directly, only interact with an instance
+    def __init__(self):
+        self.api_url = "http://example.com"
+    
+    def track(self):
+        print(f"TODO track event at {self.api_url}")
+
+tracker3 = _EventTracker()
+
+## to import:
+# from events (module name) import tracker3
+
+
+print(tracker3.track())
