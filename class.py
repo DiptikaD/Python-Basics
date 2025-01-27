@@ -72,7 +72,10 @@ print(new_none is None, "new_none is None")
 
 # to create a singleton, just need to add the __new__ method to a class:
 class EventTracker:
-    _self = None
+    _self = None    # for a singleton's sake, this is required
+
+    # what is cls? 
+        # it is like self but at a class level, it is refering to THIS class.
 
     def __new__(cls):   # this method is a constructor method
         if cls._self is None:   # if hasnt been initialised before, then it creates the instance, otherwise returns the existing one
@@ -84,3 +87,10 @@ class EventTracker:
     
     def track(self):
         print(f"TODO track event at {self.api_url}")
+
+tracker = EventTracker()
+tracker2 = EventTracker()
+print(tracker is tracker2, "tracker is tracker2")
+
+
+## Creating a Singleton with global object instead
