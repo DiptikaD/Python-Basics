@@ -74,12 +74,12 @@ print(new_none is None, "new_none is None")
 class EventTracker:
     _self = None
 
-    def __new__(cls):
-        if cls._self is None:
+    def __new__(cls):   # this method is a constructor method
+        if cls._self is None:   # if hasnt been initialised before, then it creates the instance, otherwise returns the existing one
             cls._self = super().__new__(cls)
         return cls._self
 
-    def __init__(self):
+    def __init__(self):     # is initiated after to prevent a new instance
         self.api_url= "http://example.com"
     
     def track(self):
