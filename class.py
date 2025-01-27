@@ -30,3 +30,18 @@ print(duck.name, duck.profit_margin())
 ## the __init__ pronounced as dunder init is the important initialiser method
     # without it the class would not know how to assign itself when called
     # is the first and most important method of a class
+
+# -------------------------------------- #
+
+## inheriting from another class!
+from collections import Counter
+
+class FancyCounter(Counter):    ## Inheriting by calling the class immediately
+        # can inherit from multiple classes! but not common
+        # no __init__ needed as it is present in Counter which is called
+
+    def commonest(self):
+        (value1,count1), (value2, count2) = self.most_common(2)     # .most_common from parent class
+        if count1 == count2:
+            raise ValueError("No unique most common Value")
+        return value1
